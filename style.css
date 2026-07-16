@@ -1,0 +1,133 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+	font-family: "Raleway", sans-serif;
+}
+
+.split-container {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.left,
+.right {
+	position: absolute;
+	top: 0;
+	width: 60%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.left {
+	left: 0;
+	background: #ffffff;
+	clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%);
+	/*padding-right: 15%;*/
+}
+
+.right {
+	right: 0;
+	/*background: #7c3aed;*/
+	background: #0d86ff;
+	clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
+	padding-left: 10%;
+}
+
+.main {
+	flex: 1;
+	display: flex;
+	align-items: center;
+}
+
+.content {
+	/*max-width: 400px;*/
+	text-align: center;
+}
+
+.left {
+	background: #030955;
+}
+
+.left .main {
+ perspective: 1000px;
+  perspective-origin: 50% 50%;
+}
+
+.left .content {
+ transform: 
+ 	scale(1) 
+  rotateX(36deg) rotateY(1deg) rotateZ(-13deg) 
+  translateX(0px) translateY(-300px) translateZ(0px);
+}
+
+.right {
+	color: #ffffff;
+}
+
+.posters {
+	height: 100%;
+	width: 100%;
+}
+
+.posters .row {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.posters .row:nth-child(odd) {
+	margin-left: -80px;
+}
+
+.posters .row img {
+	height: 40vh;
+	border: #0DDBFF 4px solid;
+	box-shadow: 0 0 5px 5px #5FA6EC;
+	margin: 10px;
+}
+
+#logo {
+	max-width: 15vw;
+	margin-bottom: 2rem;
+}
+
+h1 {
+	font-size: 2.5rem;
+	margin-bottom: 1rem;
+}
+
+p {
+	font-size: 1.125rem;
+	margin-bottom: 1rem;
+	/*line-height: 1.6;*/
+}
+
+.btn {
+	padding: 1em 2em;
+	background: #01004C;
+	color: white;
+	font-weight: 900;
+	border-radius: 30px;
+	text-decoration: none;
+	display: inline-block;
+}
+
+.price {
+	font-size: 2rem;
+	font-weight: 900;
+	margin-bottom: 2rem;
+}
+
+.price .old {
+	color: black;
+}
